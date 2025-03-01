@@ -8,10 +8,9 @@ class Graph:
  
     def dfs_rec(self, v, visited):
         visited.add(v)
-        print(v, end=' ')
-        for neighbour in self.graph[v]:
-            if neighbour not in visited:
-                self.dfs_rec(neighbour, visited)
+        for nb in self.graph[v]:
+            if nb not in visited:
+                self.dfs_rec(nb, visited)
 
     def dfs(self, v):
         visited = set()
